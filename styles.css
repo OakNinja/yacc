@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    background-color: beige;
+}
+
+h4 {
+    color: red;
+}
+
+#date {
+    font-weight: bold;
+}
+
+.content {
+    color: blue;
+}
