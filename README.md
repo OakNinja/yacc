@@ -5,10 +5,10 @@ Yet Another Code Camp
 ### Step 4:
 
 In this step, we will install node. Node is a javascript toolkit that we will use for loads of stuff.
-On mac: brew install node@12
+On mac: `brew install node@12`
 On windows: https://nodejs.org/en/ download and install version 12 LTS. LTS stands for Long Term Support.
 
-After installing node, open VS Code and select the `Terminal` menu option in the main menu.
+After installing node, open VS Code and select the `Terminal` menu option in the main menu and choose `New Terminal`.
 
 In the terminal, type `yarn init`
 
