@@ -22,7 +22,7 @@ Yet Another Code Camp
 * Create a new file named *index.html*
 * Right click the index.html file and select `Open with Live Server`
 * Type in the following text into *index.html* and save.
-`
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -36,4 +36,4 @@ Yet Another Code Camp
       <p>Here we have some text content!</p>
   </body>
 </html>
-`
+```
