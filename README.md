@@ -38,3 +38,10 @@ Next, create a new file named `.eslintrc.json` and add the following content (It
 ```
 
 Now we will install two plugins for VS Code, [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+Last part of step 4:
+
+- Click the cogwheel in the lower left part of VS Code
+- Choose settings in the context menu
+- In the search box, search for: `format-on-save`
+- Tick the format on save checkbox
