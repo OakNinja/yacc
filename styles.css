@@ -1,16 +1,16 @@
 body {
-    text-align: center;
-    background-color: beige;
+  text-align: center;
+  background-color: beige;
 }
 
 h4 {
-    color: red;
+  color: red;
 }
 
 #date {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .content {
-    color: blue;
+  color: blue;
 }
