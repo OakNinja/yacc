@@ -14,6 +14,8 @@ In the terminal, type `yarn init`
 
 If it doesn't work (yarn not found blabla or something like that) try restarting vs code.
 
+Yarn will ask a couple of questions, just press `Return/Enter` to set the suggested default.
+
 A new file will be created in the root (side by side with the rest of the project files) named `package.json`
 
 Next, we will set up linting:
