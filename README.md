@@ -29,6 +29,19 @@ run the following commands in your terminal:
 
 `yarn add eslint-config-prettier eslint-plugin-prettier --save-dev`
 
+Open up GitHub Desktop and you will notice there is _a_ _lot_ of new files. This is all the packages installed by Yarn. We don't want to check them into our Github repository, so we need to ignore them.
+
+Add a new file named `.gitignore` and edit that file. Paste the following rows into it:
+
+```
+node_modules
+*.lock
+```
+
+Down the road, we will most probably want to ignore more files and folders.
+
+Open GitHub Desktop again - you will now see that the diff is smaller, and the node_modules folder is gone!
+
 Next, create a new file named `.eslintrc.json` and add the following content (It's ok to copy paste):
 
 ```javascript
