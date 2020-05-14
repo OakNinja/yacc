@@ -2,63 +2,38 @@
 
 Yet Another Code Camp
 
-### Step 4:
+### Step 5:
 
-In this step, we will install node and yarn. Node is a javascript toolkit that we will use for loads of stuff. Yarn is a package manager which helps you to download useful stuff that makes web development easier.
-On mac: `brew install node@12` then `brew install yarn`
-On windows: Go to https://nodejs.org/en/ and download and install version 12 LTS. LTS stands for Long Term Support. Then install [yarn](https://classic.yarnpkg.com/en/).
+In this step, we will implement the game as described in [this tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash).
 
-After installing node, open VS Code and select the `Terminal` menu option in the main menu and choose `New Terminal`.
+We will work entirely in `index.html`, meaning we will put all of the additional css between `<style></style>` tags in the `<head>` section of the web page, and all javascript between `<script></script>` that we add between the `<body></body>` at the bottom, just before the `</body>` tag.
 
-In the terminal, type `yarn init`
-
-If it doesn't work (yarn not found blabla or something like that) try restarting vs code.
-
-Yarn will ask a couple of questions, just press `Return/Enter` to set the suggested default.
-
-A new file will be created in the root (side by side with the rest of the project files) named `package.json`
-
-Next, we will set up linting:
-Some reading on linting: https://travishorn.com/setting-up-eslint-on-vs-code-with-airbnb-javascript-style-guide-6eb78a535ba6
-
-run the following commands in your terminal:
-
-`yarn add install-peerdeps --dev eslint-config-airbnb`
-
-`yarn add eslint prettier --save-dev`
-
-`yarn add eslint-config-prettier eslint-plugin-prettier --save-dev`
-
-Open up GitHub Desktop and you will notice there is _a_ _lot_ of new files. This is all the packages installed by Yarn. We don't want to check them into our Github repository, so we need to ignore them.
-
-Add a new file named `.gitignore` and edit that file. Paste the following rows into it:
-
-```
-node_modules
-*.lock
-```
-
-Down the road, we will most probably want to ignore more files and folders.
-
-Open GitHub Desktop again - you will now see that the diff is smaller, and the node_modules folder is gone!
-
-Next, create a new file named `.eslintrc.json` and add the following content (It's ok to copy paste):
+**So, our initial change will look something like this:**
 
 ```javascript
-{
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["prettier"],
-    "rules": {
-    "prettier/prettier": ["error"]
-  }
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My webpage!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script async src="scripts.js"></script>
+    <style>
+      <!-- Here we will add the css from the tutorial -->
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to my webpage!</h1>
+
+    <p>Today's date: <span id="date"></span></p>
+    <h4>This is a smaller header</h4>
+    <p class="content">
+      <div class="gameContainer">
+        <!--  Here we will add the HTML from the tutorial -->
+      </div>
+    </p>
+    <script>
+      <!--  Here we will add the Scripts from the tutorial -->
+    </script>
+  </body>
+</html>
 ```
-
-Now we will install two plugins for VS Code, [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-Last part of step 4:
-
-- Click the cogwheel in the lower left part of VS Code
-- Choose settings in the context menu
-- In the search box, search for: `format-on-save`
-- Tick the format on save checkbox
