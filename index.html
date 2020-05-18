@@ -3,7 +3,7 @@
   <head>
     <title>My webpage!</title>
     <style>
-      <!-- Here we will add the css from the tutorial -->
+     
     </style>
   </head>
   <body>
@@ -13,7 +13,13 @@
     <h4>This is a smaller header</h4>
     <p class="content">
       <div class="gameContainer">
-        <!--  Here we will add the HTML from the tutorial -->
+        <div class="resultParas">
+          <p class="guesses"></p>
+          <p class="lastResult"></p>
+          <p class="lowOrHi"></p>
+        </div>
+        <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" class="guessSubmit" onclick="checkGuess()">  
       </div>
     </p>
     <script>
@@ -25,6 +31,9 @@
     const guessField = document.querySelector('.guessField');
     let guessCount = 1;
     let resetButton;
+    function checkGuess() {
+      alert('Alert!');
+    }
     </script>
   </body>
 </html>
