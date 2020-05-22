@@ -6,6 +6,8 @@ const guessSubmit = document.querySelector(".guessSubmit");
 const guessField = document.querySelector(".guessField");
 let guessCount = 1;
 let resetButton;
+let maxGuess = 10;
+let guessesLeft;
 
 function checkGuess() {
   let userGuess = Number(guessField.value);
@@ -20,7 +22,7 @@ function checkGuess() {
     lastResult.style.backgroundColor = "green";
     lowOrHi.textContent = "";
     setGameOver();
-  } else if (guessCount === 10) {
+  } else if (guessCount === maxGuess) {
     lastResult.textContent = "!!!GAME OVER!!!";
     lowOrHi.textContent = "";
     setGameOver();
@@ -33,7 +35,7 @@ function checkGuess() {
       lowOrHi.textContent = "Last guess was too high!";
     }
   }
-
+  guessesLeft = maxGuess - guessCount;
   guessCount++;
   guessField.value = "";
   guessField.focus();
