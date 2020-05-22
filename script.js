@@ -4,10 +4,10 @@ const lastResult = document.querySelector(".lastResult");
 const lowOrHi = document.querySelector(".lowOrHi");
 const guessSubmit = document.querySelector(".guessSubmit");
 const guessField = document.querySelector(".guessField");
+const guessesLeft = document.querySelector(".guessesLeft");
 let guessCount = 1;
 let resetButton;
 let maxGuess = 10;
-let guessesLeft;
 
 function checkGuess() {
   let userGuess = Number(guessField.value);
@@ -35,7 +35,8 @@ function checkGuess() {
       lowOrHi.textContent = "Last guess was too high!";
     }
   }
-  guessesLeft = maxGuess - guessCount;
+  let currentNumberLeft = maxGuess - guessCount;
+  guessesLeft.textContent = "You have " + currentNumberLeft + " guesses left";
   guessCount++;
   guessField.value = "";
   guessField.focus();
