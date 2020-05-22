@@ -1,4 +1,4 @@
-let randomNumber = 7;
+let randomNumber = getRandomNumber();
 const guesses = document.querySelector(".guesses");
 const lastResult = document.querySelector(".lastResult");
 const lowOrHi = document.querySelector(".lowOrHi");
@@ -63,5 +63,9 @@ function resetGame() {
   guessField.value = "";
   guessField.focus();
   lastResult.style.backgroundColor = "white";
-  randomNumber = Math.floor(Math.random() * 100) + 1;
+  randomNumber = getRandomNumber();
+}
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * 100) + 1;
 }
