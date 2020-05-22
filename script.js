@@ -8,6 +8,7 @@ const guessesLeft = document.querySelector(".guessesLeft");
 let guessCount = 1;
 let resetButton;
 let maxGuess = 10;
+let previousGuesses = [];
 
 function checkGuess() {
   let userGuess = Number(guessField.value);
@@ -16,6 +17,8 @@ function checkGuess() {
   }
 
   guesses.textContent += userGuess + " ";
+  previousGuesses.push(userGuess);
+  console.log(previousGuesses);
 
   if (userGuess === randomNumber) {
     lastResult.textContent = "Congratulations! You got it right!";
