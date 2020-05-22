@@ -12,10 +12,13 @@ let previousGuesses = [];
 
 function checkGuess() {
   let userGuess = Number(guessField.value);
+  let existingNumbers;
   if (guessCount === 1) {
     guesses.textContent = "Previous guesses: ";
   }
-
+  if (previousGuesses.includes(userGuess)) {
+    console.log("You already guessed that");
+  }
   guesses.textContent += userGuess + " ";
   previousGuesses.push(userGuess);
   console.log(previousGuesses);
